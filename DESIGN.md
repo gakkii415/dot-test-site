@@ -350,14 +350,11 @@ Yesの場合、装飾を追加する前に、構成、情報階層、コンテ�
 
 ## Project Direction
 
-- Product / users / primary task:
-- Context of use / target devices:
-- Desired impression:
-- Information density / hierarchy:
-- Reference products / source URLs:
-- Selected reference dimensions / what to borrow:
-- What not to copy / avoid:
-- Structural direction:
-- Typography / color / spacing / shape direction:
-- Motion / responsive direction:
-- Durable design decisions:
+- Product / users / primary task: 日本語の小さな紹介・操作テスト。初めて来た人がボタンを押して、回数と反応を確認する。
+- Context: iPhone / desktop、短時間。個人情報・外部API・会話接続なし。
+- Structure comparison: 中央のキャラクターの下に全内容を積む案と、desktopで紹介とキャラクターを並べて共通の操作欄を下に置く案を比較。後者を採用し、mobileでは小さいキャラクターと操作を近づける。
+- Reference: Firefox https://www.mozilla.org/en-US/firefox/new/ は環境の通信制限で表示不可。GitHub https://github.com/ は実画面・DOMを確認したが外部CSSが取得できず、参考デザインの視覚確認は未完了。取得できた構造は、スキップリンク、明確な主見出し、主要操作の文言。大規模ナビや販促セクションは採用しない。未取得の見た目を模倣したとは扱わない。
+- Macrostructure: 控えめなヘッダー、紹介と独自SVGキャラクター、ボタンと結果を横並びにした操作欄。補助説明は欄外。
+- Typography / color: 日本語のシステムフォント、本文15px、見出し40px以下。生成りの背景、墨色の本文、操作とキャラクターに青。
+- Signature: 黒いベレー帽と細かな毛並みのオリジナルdot。押すと軽く揺れて定型のあいさつを返す。
+- Motion / responsive: motion軽減設定では揺れなし。mobileは操作欄を縦配置し48px以上のボタン、結果は読み上げ通知。reset後は主ボタンにフォーカスを戻す。

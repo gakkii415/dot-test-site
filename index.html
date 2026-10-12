@@ -1,4 +1,29 @@
 <!doctype html>
-<html lang="ja"><meta charset="utf-8"><title>準備中</title><body><main>準備中</main>
-<!-- app-version:start --><small id="app-version">v1</small><!-- app-version:end -->
-</body></html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="青くてふわふわ、黒いベレー帽のdot。ボタンを押して反応を試せる、小さなテストサイトです。">
+  <title>dot — 小さな「できた」を、一緒に。</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='25' fill='%233d8ddd'/%3E%3Cellipse cx='31' cy='15' rx='25' ry='10' fill='%2325292f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="wordmark" href="#main" aria-label="dot メインへ">dot<span aria-hidden="true">.</span></a><span class="edition">小さな実験室 <span aria-hidden="true">／</span> TEST SITE</span></header>
+  <main id="main">
+    <section class="hello" aria-labelledby="hello-title">
+      <div class="introduction"><p class="eyebrow">はじめまして、dotです。</p><h1 id="hello-title">小さな「できた」を、<br>一緒に。</h1><p class="description">青くてふわふわ、黒いベレー帽が目印。<br>ここは、アシスタントのdotを紹介する<br class="desktop-break">小さなテストサイトです。</p><p class="invitation">まずは、ボタンでごあいさつ。<span aria-hidden="true">↘</span></p></div>
+      <figure class="portrait"><div class="portrait-disc"></div><img id="mascot" src="dot.svg" alt="黒いベレー帽をかぶった、青くてふわふわのdotがほほえんでいます" width="440" height="440"><figcaption>dot <span>ちいさく、ひとつずつ。</span></figcaption></figure>
+    </section>
+    <section class="experiment" aria-labelledby="test-title">
+      <div class="test-intro"><p class="eyebrow">TRY IT</p><h2 id="test-title">ひと押し、してみよう。</h2><p>押すたびに、dotのひとことと回数が変わります。</p><div class="actions"><button id="test-button" type="button" disabled>dotにあいさつ <span aria-hidden="true">↗</span></button><button id="reset-button" class="reset" type="button" disabled>リセット</button></div></div>
+      <div class="result" role="status" aria-live="polite" aria-atomic="true"><div class="result-top"><span id="state">あいさつ待ち</span><span><strong id="count">0</strong> 回</span></div><p id="message">こんにちは、の準備はできています。</p><p id="detail">あいさつボタンから、気軽にどうぞ。</p></div>
+      <noscript><p class="no-script">このテストにはJavaScriptが必要です。ブラウザの設定で有効にすると、ボタンを試せます。</p></noscript>
+    </section>
+    <p class="test-note">このボタンは画面上の反応を試すデモです。<br class="mobile-break">AIとの会話や音声接続は行いません。<br>入力や登録は不要。回数はリセット・再読み込みで0に戻ります。</p>
+  </main>
+  <footer><span class="footer-logo">dot<span aria-hidden="true">.</span></span><span>ひとつ押して、ひとつできた。</span><!-- app-version:start --><small id="app-version">v2</small><!-- app-version:end --></footer>
+</body>
+</html>

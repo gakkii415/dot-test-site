@@ -1,0 +1,32 @@
+'use strict';
+const testButton = document.querySelector('#test-button');
+const resetButton = document.querySelector('#reset-button');
+const countDisplay = document.querySelector('#count');
+const state = document.querySelector('#state');
+const message = document.querySelector('#message');
+const detail = document.querySelector('#detail');
+const mascot = document.querySelector('#mascot');
+const greetings = ['こんにちは！dotです。', 'もう一度、会えてうれしいです。', 'ひと押し、ちゃんと届きました。', '小さな「できた」が増えましたね。'];
+let count = 0;
+testButton.disabled = false;
+testButton.addEventListener('click', () => {
+  count += 1;
+  countDisplay.textContent = count.toLocaleString('ja-JP');
+  state.textContent = 'あいさつ成功';
+  message.textContent = greetings[(count - 1) % greetings.length];
+  detail.textContent = `${count.toLocaleString('ja-JP')}回目のあいさつです。何度でも試せます。`;
+  resetButton.disabled = false;
+  mascot.classList.remove('wave');
+  void mascot.offsetWidth;
+  mascot.classList.add('wave');
+});
+resetButton.addEventListener('click', () => {
+  count = 0;
+  countDisplay.textContent = '0';
+  state.textContent = 'リセットしました';
+  message.textContent = 'こんにちは、の準備はできています。';
+  detail.textContent = 'またボタンを押して、はじめからどうぞ。';
+  mascot.classList.remove('wave');
+  testButton.focus();
+  resetButton.disabled = true;
+});
